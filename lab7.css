@@ -1,0 +1,30 @@
+.treug{
+    position: absolute;
+    border-left: 0 solid transparent;
+    border-right: 0 solid transparent;
+    border-bottom: 0 solid blue;
+}
+.kvadr{
+    position: absolute;
+    background:red;
+    border: 1px solid black;
+}
+.krug{
+    position: absolute;
+	background: green;
+    border-radius: 50px;
+    border: 1px solid black;
+}
+#out{
+    position: absolute;
+}
+
+.treug:hover{
+    border-bottom-color: yellow;
+}
+.krug:hover{
+    background: yellow;
+}
+.kvadr:hover{
+    background: yellow;
+}
