@@ -9,6 +9,7 @@ kvadr =() =>{
         kv.style.width=width + "px";
         kv.style.height=width + "px";
         SetPosition(kv);
+        kv.addEventListener("dblclick", del);
         output.appendChild(kv);
     }
 }
@@ -23,6 +24,7 @@ Treu =() =>{
         tr.style.borderRightWidth=width + "px";
         tr.style.borderBottomWidth=width + "px";
         SetPosition(tr);
+        tr.addEventListener("dblclick", del);
         output.appendChild(tr);
     }
 }
@@ -37,6 +39,7 @@ Krug =() =>{
         kr.style.height=width + "px";
         kr.style.borderRadius=width/2 + "px";
         SetPosition(kr);
+        kr.addEventListener("dblclick", del);
         output.appendChild(kr);
     }
 }
@@ -47,3 +50,9 @@ SetPosition=(shape)=>{
     shape.style.left=left + "px";
     shape.style.top=top1 + "px";
 }
+
+
+del=(event)=>{
+    if(event.target.className=="kvadr"||event.target.className=="treug"||event.target.className=="krug")  
+        event.target.style.display = "none";
+} 
